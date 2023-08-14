@@ -21,10 +21,17 @@ spec:
   steps:
     - name: goodbye
       image: ubuntu
+      env:
+        - name: TEST_LOC
+          valueFrom:
+            configMapKeyRef:
+              name: environment-properties
+              key: test_loc
       script: |
         #!/bin/bash
         echo "Goodbye $(params.username)!"
-        echo "This is from ${test_loc}"
+        echo "This is from ${TEST_LOC}"
+        echo $TEST_LOC
 ---
 apiVersion: tekton.dev/v1beta1
 kind: Pipeline
