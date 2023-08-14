@@ -50,6 +50,7 @@ spec:
         - hello
       taskRef:
         name: goodbye
-      params:
-      - name: username
-        value: $(params.username)
+      matrix:
+        params:
+        - name: username
+          value: ["user1","user2"]
