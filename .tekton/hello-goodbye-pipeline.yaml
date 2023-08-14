@@ -35,9 +35,10 @@ spec:
 ---
 apiVersion: tekton.dev/v1beta1
 kind: Pipeline
-metadata:
+metadata: 
   name: hello-goodbye
 spec:
+  enable-api-fields: alpha
   params:
   - name: username
     type: string
