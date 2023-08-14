@@ -1,4 +1,4 @@
-apiVersion: tekton.dev/v1alpha1
+apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
   name: hello
@@ -10,7 +10,7 @@ spec:
         #!/bin/sh
         echo "Hello World"
 ---
-apiVersion: tekton.dev/v1alpha1
+apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
   name: goodbye
@@ -33,7 +33,7 @@ spec:
         echo "This is from ${TEST_LOC}"
         echo $TEST_LOC
 ---
-apiVersion: tekton.dev/v1alpha1
+apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
   name: hello-goodbye
