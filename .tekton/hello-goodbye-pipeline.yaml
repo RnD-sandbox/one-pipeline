@@ -24,6 +24,7 @@ spec:
       script: |
         #!/bin/bash
         echo "Goodbye $(params.username)!"
+        echo "This is from ${test_loc}"
 ---
 apiVersion: tekton.dev/v1beta1
 kind: Pipeline
