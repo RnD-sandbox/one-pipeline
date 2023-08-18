@@ -41,7 +41,7 @@ spec:
   enable-api-fields: alpha
   params:
   - name: username
-    type: string
+    type: array
   tasks:
     - name: hello
       taskRef:
