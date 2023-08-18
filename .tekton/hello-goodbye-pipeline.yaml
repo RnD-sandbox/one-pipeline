@@ -40,8 +40,11 @@ metadata:
 spec:
   enable-api-fields: alpha
   params:
-  - name: username
+  - name: usernames
     type: array
+    default:
+    - Neo
+    - Zaya
   tasks:
     - name: hello
       taskRef:
@@ -52,6 +55,4 @@ spec:
       matrix:
         params:
         - name: username
-          value: 
-          - user1
-          - user2
+          value: $(params.usernames)
