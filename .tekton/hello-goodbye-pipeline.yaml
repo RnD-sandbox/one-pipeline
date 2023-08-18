@@ -17,7 +17,6 @@ metadata:
 spec:
   params:
   - name: username
-    type: string
   steps:
     - name: goodbye
       image: ubuntu
