@@ -54,4 +54,6 @@ spec:
       matrix:
         params:
         - name: username
-          value: ["user1","user2"]
+          value: 
+          - user1
+          - user2
