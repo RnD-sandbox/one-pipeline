@@ -47,8 +47,6 @@ spec:
       taskRef:
         name: hello
     - name: goodbye
-      runAfter:
-        - hello
       taskRef:
         name: goodbye
       matrix:
