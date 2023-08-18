@@ -37,13 +37,6 @@ kind: Pipeline
 metadata: 
   name: hello-goodbye
 spec:
-  enable-api-fields: alpha
-  params:
-  - name: usernames
-    type: array
-    default:
-    - Neo
-    - Zaya
   tasks:
     - name: hello
       taskRef:
@@ -54,4 +47,6 @@ spec:
       matrix:
         params:
         - name: username
-          value: $(params.usernames)
+          value: 
+          - Neo
+          - Zaya
